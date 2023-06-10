@@ -76,6 +76,8 @@ function dateHandler(date) {
             $.querySelector("#thDay").innerHTML = days[index + 3]
             $.querySelector("#foDay").innerHTML = days[index + 4]
             $.querySelector("#fifDay").innerHTML = days[index + 5]
+
+
         }
     })
     let hours = date.getHours();
