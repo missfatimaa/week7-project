@@ -10,7 +10,6 @@ let currentBtn = $.querySelector("#button")
 let dateData = $.querySelector("#dateData")
 let celConv = $.querySelector("#celsius")
 let fahConv = $.querySelector("#fahrenheit")
-
 function showWeather(response) {
     cityName.innerHTML = response.data.name
     temp.innerHTML = Math.round(response.data.main.temp)
@@ -57,6 +56,7 @@ celConv.addEventListener("click", function (event) {
     temp.innerHTML = resultValue
     celConv.style.pointerEvents = "none"
 })
+
 function dateHandler(date) {
     let index = date.getDay();
     let days = [
@@ -69,6 +69,15 @@ function dateHandler(date) {
         "Saturday"
     ];
     let day = days[index];
+    days.forEach(function (item) {
+        if (item === day) {
+            $.querySelector("#fiDay").innerHTML = days[index + 1]
+            $.querySelector("#seDay").innerHTML = days[index + 2]
+            $.querySelector("#thDay").innerHTML = days[index + 3]
+            $.querySelector("#foDay").innerHTML = days[index + 4]
+            $.querySelector("#fifDay").innerHTML = days[index + 5]
+        }
+    })
     let hours = date.getHours();
     if (hours < 10) {
         hours = `0${hours}`;
