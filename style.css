@@ -33,18 +33,18 @@ form {
 
 }
 
-
 .location {
     display: flex;
     flex-direction: column;
+    width: 150px;
+    text-align: center;
 }
 
 .right {
-    text-align: right;
-}
-
-#button {
-    margin-right: 30px;
+    /* text-align: right; */
+    display: flex;
+    justify-content: flex-end;
+    
 }
 
 .middle {
